@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carigara Public Library</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="#home" class="brand">
+            <span class="brand-logo">C</span>
+            <span>
+                Carigara
+                <small>Public Library</small>
+            </span>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#catalog">Book Catalog</a>
+            <a href="#my-reservations">My Reservations</a>
+        </nav>
+
+        <a href="#catalog" class="header-button">
+            Find a Book →
+        </a>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR COMMUNITY LIBRARY</p>
+
+                <h1>
+                    Your next great read
+                    <span>is waiting for you.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Check book availability and reserve your copy
+                    before travelling to the library. Save time,
+                    transportation costs, and effort.
+                </p>
+
+                <a href="#catalog" class="primary-button">
+                    Explore the Catalog →
+                </a>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>Easy</strong>
+                        <small>Book Search</small>
+                    </div>
+
+                    <div>
+                        <strong>Quick</strong>
+                        <small>Reservations</small>
+                    </div>
+
+                    <div>
+                        <strong>Local</strong>
+                        <small>Library Service</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-art">
+                <div class="decorative-book book-one"></div>
+                <div class="decorative-book book-two"></div>
+                <div class="decorative-book book-three"></div>
+                <div class="decorative-book book-four"></div>
+
+                <div class="art-caption">
+                    <strong>Read. Reserve. Relax.</strong>
+                    <small>Your local library, made easier.</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-panel">
+            <div>
+                <h3>Find Your Next Book</h3>
+                <p>Search by title, author, or category.</p>
+            </div>
+
+            <div class="search-controls">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Enter book title or author..."
+                >
+
+                <button id="clearSearch" type="button">
+                    Clear
+                </button>
+
+                <button id="searchButton" type="button">
+                    Search →
+                </button>
+            </div>
+        </section>
+
+        <section class="section" id="catalog">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE COLLECTION</p>
+                    <h2>Explore the Book Catalog</h2>
+                    <p>
+                        Browse books and check their availability.
+                    </p>
+                </div>
+
+                <span id="resultCount">Books in collection</span>
+            </div>
+
+            <div class="filters" id="categoryFilters">
+                <button class="filter-chip active"
+                        data-category="All" type="button">
+                    All Books
+                </button>
+
+                <button class="filter-chip"
+                        data-category="Fiction" type="button">
+                    Fiction
+                </button>
+
+                <button class="filter-chip"
+                        data-category="Science" type="button">
+                    Science
+                </button>
+
+                <button class="filter-chip"
+                        data-category="History" type="button">
+                    History
+                </button>
+
+                <button class="filter-chip"
+                        data-category="Personal Growth" type="button">
+                    Personal Growth
+                </button>
+            </div>
+
+            <div id="bookGrid" class="book-grid"></div>
+
+            <p id="emptyState" class="empty-state hidden">
+                No books found. Try another search.
+            </p>
+        </section>
+
+        <section class="reservation-section" id="my-reservations">
+            <div class="section">
+                <p class="eyebrow">YOUR READING LIST</p>
+
+                <h2>My Reservations</h2>
+
+                <p>
+                    View your reserved books and pickup deadlines.
+                </p>
+
+                <span id="reservationCount">0 active</span>
+
+                <div id="reservationList" class="reservation-list"></div>
+
+                <p id="noReservations">
+                    You have no reservations yet.
+                    Choose a book from the catalog to get started.
+                </p>
+
+                <p class="demo-note">
+                    Student prototype: reservations are stored
+                    in this browser only.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <p class="eyebrow">THREE SIMPLE STEPS</p>
+
+            <h2>Make the Trip Worth It</h2>
+
+            <div class="steps-grid">
+                <article class="step-card">
+                    <span>01</span>
+                    <h3>Search</h3>
+                    <p>
+                        Find a book by title, author, or category.
+                    </p>
+                </article>
+
+                <article class="step-card">
+                    <span>02</span>
+                    <h3>Check Availability</h3>
+                    <p>
+                        Check whether the book is available,
+                        borrowed, or reserved.
+                    </p>
+                </article>
+
+                <article class="step-card">
+                    <span>03</span>
+                    <h3>Reserve and Pick Up</h3>
+                    <p>
+                        Reserve your book and check the pickup
+                        deadline before visiting the library.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <strong>Carigara Public Library</strong>
+        <p>
+            Making reading more accessible to the Carigara community.
+        </p>
+        <small>System Analysis and Design — Student Project</small>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="data.js"></script>
+    <script src="catalog.js"></script>
+    <script src="reservations.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

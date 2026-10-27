@@ -1,0 +1,737 @@
+/* CARIGARA PUBLIC LIBRARY
+   MEMBER 1: Donita Kyla Antoc
+   Main website design
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #17243a;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.site-header {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.brand small {
+    display: block;
+    font-size: 10px;
+    color: #6d7889;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    color: white;
+    background: #2764d8;
+    border-radius: 12px;
+    font-size: 23px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #2764d8;
+}
+
+.header-button {
+    padding: 10px 16px;
+    color: #2764d8;
+    border: 1px solid #dbe5f5;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.hero {
+    max-width: 1150px;
+    margin: 15px auto;
+    padding: 45px;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(
+        120deg,
+        #f1f6ff,
+        #f8faff,
+        #e4edff
+    );
+    border-radius: 25px;
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    color: #2764d8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    max-width: 550px;
+    color: #142b4a;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    display: block;
+    color: #2764d8;
+}
+
+.hero-description {
+    max-width: 450px;
+    margin: 20px 0;
+    color: #657187;
+    font-size: 14px;
+}
+
+.primary-button,
+.search-controls button {
+    display: inline-block;
+    padding: 12px 18px;
+    color: white;
+    background: #2764d8;
+    border: none;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+.primary-button:hover,
+.search-controls button:hover {
+    background: #1d4fb1;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 28px;
+    margin-top: 30px;
+}
+
+.hero-stats strong,
+.hero-stats small {
+    display: block;
+}
+
+.hero-stats strong {
+    color: #142b4a;
+}
+
+.hero-stats small {
+    color: #6d7889;
+    font-size: 11px;
+}
+
+
+.hero-art {
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: linear-gradient(
+        145deg,
+        #d6e5ff,
+        #f4e8d8
+    );
+}
+
+.decorative-book {
+    position: absolute;
+    bottom: 60px;
+    width: 17%;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 5px 5px 0 #142b4a15;
+}
+
+.book-one {
+    left: 12%;
+    height: 145px;
+    background: #2f5ca9;
+    transform: rotate(-5deg);
+}
+
+.book-two {
+    left: 31%;
+    height: 180px;
+    background: #d5a75d;
+    transform: rotate(3deg);
+}
+
+.book-three {
+    left: 50%;
+    height: 210px;
+    background: #f8f5ec;
+    transform: rotate(-2deg);
+}
+
+.book-four {
+    left: 69%;
+    height: 160px;
+    background: #3b806e;
+    transform: rotate(4deg);
+}
+
+.art-caption {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    padding: 12px;
+    background: #ffffffeb;
+    border-radius: 10px;
+}
+
+.art-caption strong,
+.art-caption small {
+    display: block;
+}
+
+.art-caption small {
+    color: #6d7889;
+    font-size: 11px;
+}
+
+
+.search-panel {
+    max-width: 1000px;
+    margin: -5px auto 40px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #e5eaf1;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 12px 35px #18365b12;
+}
+
+.search-panel h3 {
+    font-size: 15px;
+}
+
+.search-panel p {
+    color: #6d7889;
+    font-size: 12px;
+}
+
+.search-controls {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+}
+
+.search-controls input {
+    min-width: 0;
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #e5eaf1;
+    border-radius: 8px;
+}
+
+.search-controls #clearSearch {
+    color: #2764d8;
+    background: #edf4ff;
+}
+
+
+.section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 55px 25px;
+}
+
+.section h2 {
+    margin-bottom: 8px;
+    color: #142b4a;
+    font-size: 30px;
+}
+
+.section > p:not(.eyebrow) {
+    color: #6d7889;
+    font-size: 13px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-heading > span {
+    padding: 8px 12px;
+    border: 1px solid #e5eaf1;
+    border-radius: 20px;
+    color: #6d7889;
+    font-size: 12px;
+}
+
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.filter-chip {
+    padding: 9px 15px;
+    color: #657187;
+    background: white;
+    border: 1px solid #e5eaf1;
+    border-radius: 25px;
+    font-size: 12px;
+}
+
+.filter-chip.active,
+.filter-chip:hover {
+    color: white;
+    background: #2764d8;
+    border-color: #2764d8;
+}
+
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.book-card {
+    overflow: hidden;
+    border: 1px solid #e5eaf1;
+    border-radius: 14px;
+    background: white;
+    transition: 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px #18365b12;
+}
+
+.book-cover {
+    min-height: 180px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cover, #dbe8f9);
+}
+
+.cover-title {
+    color: var(--cover-ink, #142b4a);
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cover-author {
+    position: absolute;
+    bottom: 12px;
+    color: var(--cover-ink, #142b4a);
+    font-size: 10px;
+}
+
+.favorite-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: white;
+    border-radius: 50%;
+    padding: 7px;
+}
+
+.favorite-button.is-favorite {
+    color: #d64c69;
+}
+
+.book-info {
+    padding: 15px;
+}
+
+.book-category {
+    color: #2764d8;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.book-info h3 {
+    margin: 8px 0 4px;
+    font-size: 14px;
+}
+
+.book-author {
+    color: #6d7889;
+    font-size: 12px;
+}
+
+.book-meta {
+    margin-top: 15px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid #e5eaf1;
+}
+
+.status {
+    padding: 5px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.status.available {
+    color: #207a55;
+    background: #e7f7ef;
+}
+
+.status.borrowed {
+    color: #a25344;
+    background: #fff0eb;
+}
+
+.status.reserved {
+    color: #986316;
+    background: #fff3d8;
+}
+
+.reserve-button {
+    padding: 8px 10px;
+    color: #2764d8;
+    background: #edf4ff;
+    border: none;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.reserve-button:disabled {
+    color: #929baa;
+    background: #f0f2f5;
+    cursor: not-allowed;
+}
+
+.empty-state,
+.no-reservations {
+    margin-top: 20px;
+    padding: 25px;
+    text-align: center;
+    border: 1px dashed #dbe2ec;
+    border-radius: 12px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.reservation-section {
+    background: #f5f8fd;
+}
+
+.reservation-section .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.reservation-counter {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 7px 12px;
+    color: #2764d8;
+    background: white;
+    border-radius: 20px;
+}
+
+.reservation-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.reservation-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #e5eaf1;
+    border-radius: 12px;
+}
+
+.reservation-mini-cover {
+    min-width: 45px;
+    padding: 10px 5px;
+    text-align: center;
+    border-radius: 6px;
+    background: var(--cover, #dbe8f9);
+    color: var(--cover-ink, #142b4a);
+    font-size: 10px;
+}
+
+.reservation-detail {
+    flex: 1;
+}
+
+.reservation-detail strong,
+.reservation-detail small {
+    display: block;
+}
+
+.reservation-detail small {
+    color: #6d7889;
+    font-size: 11px;
+}
+
+.cancel-button {
+    padding: 8px 10px;
+    color: #6d7889;
+    background: white;
+    border: 1px solid #e5eaf1;
+    border-radius: 7px;
+}
+
+.demo-note {
+    margin-top: 18px;
+    font-size: 11px;
+}
+
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.step-card {
+    padding: 22px;
+    border: 1px solid #e5eaf1;
+    border-radius: 14px;
+}
+
+.step-card span {
+    display: inline-block;
+    padding: 8px 11px;
+    color: #2764d8;
+    background: #edf4ff;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.step-card h3 {
+    margin: 15px 0 8px;
+}
+
+.step-card p {
+    color: #6d7889;
+    font-size: 13px;
+}
+
+
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #e5eaf1;
+}
+
+footer p,
+footer small {
+    display: block;
+    margin-top: 7px;
+    color: #6d7889;
+    font-size: 12px;
+}
+
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    z-index: 10;
+    padding: 12px 18px;
+    color: white;
+    background: #142b4a;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 10px);
+    transition: 0.2s;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+
+@media (max-width: 900px) {
+    .hero {
+        margin: 15px;
+        padding: 30px;
+    }
+
+    .search-panel {
+        margin: 20px;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 11px;
+    }
+
+    .header-button {
+        font-size: 11px;
+    }
+
+    .hero {
+        display: block;
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-art {
+        margin-top: 25px;
+        min-height: 240px;
+    }
+
+    .hero-stats {
+        gap: 15px;
+    }
+
+    .search-panel {
+        display: block;
+        padding: 18px;
+    }
+
+    .search-controls {
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    .search-controls input {
+        flex-basis: 100%;
+    }
+
+    .section {
+        padding: 40px 18px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section h2 {
+        font-size: 25px;
+    }
+
+    .book-grid {
+        gap: 10px;
+    }
+
+    .book-cover {
+        min-height: 145px;
+    }
+
+    .book-info {
+        padding: 10px;
+    }
+
+    .book-info h3 {
+        font-size: 12px;
+    }
+
+    .book-meta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .reserve-button {
+        width: 100%;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-row {
+        flex-wrap: wrap;
+    }
+}
+
